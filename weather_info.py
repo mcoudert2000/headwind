@@ -24,4 +24,4 @@ def get_wind(weather):
     wind_dict = {'time':weather['time'],'wind_speed':weather['wspd'],'wind_direction':weather['wdir']}
     return wind_dict
 
-test_weather = get_weather(56.34,-2.79,'2020-11-28',9)
+test_weather = get_weather(52.4118,1.7776,'1999-11-03',9)
