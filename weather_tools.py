@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 29 15:52:14 2021
-
-@author: matthewcoudert
-"""
-
 import requests
 
 
@@ -32,14 +24,3 @@ def get_nearby_station(lat,lon):
                        params = params,
                        headers = weather_key).json()['data'][0]['id']
     return out
-
-#for track in gpx.tracks:
-   # for segment in track.segments:
-       # for point in segment.points:
-       #     lat = point.latitude
-       #     lon = point.longitude
-       #     elev = point.elevation
-            
-
-#weather = get_weather(54.5,6,'2020-05-22', 14)
-#print(weather)
