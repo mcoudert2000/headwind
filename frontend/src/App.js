@@ -50,7 +50,7 @@ function App() {
 				console.error('Error:', error);
 			});
 	};
-
+  console.log(map);
 	return(
    <div>
 			<input 
@@ -63,7 +63,6 @@ function App() {
 			{isSelected ? (
 				<div>
 					<p>Filename: {selectedFile.name}</p>
-					<p>Filetype: {selectedFile.type}</p>
 					<p>Size in bytes: {selectedFile.size}</p>
 					<p>
 						lastModifiedDate:{' '}
@@ -77,7 +76,7 @@ function App() {
 				<button onClick={handleSubmission}>Submit</button>
 			</div>
       {map && 
-       map}
+       <div dangerouslySetInnerHTML={{__html: map }} />}
 		</div>
 	);
 }

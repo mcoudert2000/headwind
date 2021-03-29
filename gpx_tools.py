@@ -14,7 +14,7 @@ def get_start_position(gpx):
     start_point = gpx.tracks[0].segments[0].points[0]
     return start_point.latitude, start_point.longitude, str(start_point.time.date()), int(start_point.time.time().hour)
 
-gpx_file = open('/Users/matthewcoudert/Downloads/activity_5852303688.gpx', 'r')
+# gpx_file = open('/Users/matthewcoudert/Downloads/activity_5852303688.gpx', 'r')
 
 #gpx = gpxpy.parse(gpx_file)
 
@@ -64,5 +64,5 @@ def generate_map(gpx_file):
     ratio = get_ratio(lat_lon, wind_direction) 
     add_to_map(lat_lon, ratio, world_map)
     world_map.fit_bounds(world_map.get_bounds())
-    world_map.save('/Users/matthewcoudert/Maths/#Headwind/#Headwind/maps/mymap.html')
-    return world_map
+    # world_map.save('/Users/matthewcoudert/Maths/#Headwind/#Headwind/maps/mymap.html')
+    return world_map._repr_html_()
